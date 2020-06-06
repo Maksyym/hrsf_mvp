@@ -1,0 +1,42 @@
+{
+  "name": "hrsf_mvp",
+  "version": "1.0.0",
+  "description": "HRSEI mvp project",
+  "main": "index.js",
+  "scripts": {
+    "react-dev": "webpack -d --watch",
+    "server-dev": "nodemon server/index.js",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maksyym/hrsf_mvp.git"
+  },
+  "author": "Maxim Rietveld",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maksyym/hrsf_mvp/issues"
+  },
+  "homepage": "https://github.com/Maksyym/hrsf_mvp#readme",
+  "dependencies": {
+    "@babel/core": "^7.10.2",
+    "babel-loader": "^8.1.0",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ]
+  }
+}
