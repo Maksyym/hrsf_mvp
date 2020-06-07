@@ -5,8 +5,8 @@ import Modal, { ModalProvider, BaseModalBackground } from "styled-react-modal";
 import QuestionList from "./QuestionList.jsx";
 
 const StyledModal = Modal.styled`
-  width: 75rem;
-  height: 40rem;
+  width: 1250px;
+  height: 600px;
   display: flex;
   align-items: top;
   justify-content: center;
