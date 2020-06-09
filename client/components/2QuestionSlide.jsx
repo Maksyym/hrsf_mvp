@@ -67,8 +67,7 @@ class TwoQuestionSlide extends React.Component {
     this.handleClick2 = this.handleClick2.bind(this);
   }
 
-  handleMouseOver1(event) {
-    console.log(event)
+  handleMouseOver1() {
     this.setState({
       optionOneHover: true,
       optionOneColor: 'lawngreen'
@@ -97,12 +96,14 @@ class TwoQuestionSlide extends React.Component {
   }
 
   handleClick1() {
-    event.preventDefault()
+    event.preventDefault();
+    this.props.select(1);
     this.props.translate();
   }
 
   handleClick2() {
-    event.preventDefault()
+    event.preventDefault();
+    this.props.select(2);
     this.props.translate();
   }
 

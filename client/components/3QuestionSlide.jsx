@@ -95,6 +95,7 @@ class ThreeQuestionSlide extends React.Component {
 
   handleClick1() {
     event.preventDefault()
+    this.props.select(1);
     this.props.translate();
   }
 
@@ -114,6 +115,7 @@ class ThreeQuestionSlide extends React.Component {
 
   handleClick2() {
     event.preventDefault()
+    this.props.select(2);
     this.props.translate();
   }
 
@@ -133,7 +135,8 @@ class ThreeQuestionSlide extends React.Component {
 
   handleClick3() {
     event.preventDefault()
-    this.props.translate()
+    this.props.select(3);
+    this.props.translate();
   }
 
   render() {

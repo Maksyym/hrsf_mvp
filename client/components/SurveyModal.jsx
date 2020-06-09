@@ -4,6 +4,10 @@ import styled from "styled-components";
 import Modal, { ModalProvider, BaseModalBackground } from "styled-react-modal";
 import QuestionList from "./QuestionList.jsx";
 
+const Container = styled.div`
+  justify-content: center;
+`;
+
 const StyledModal = Modal.styled`
   width: 1250px;
   height: 600px;
@@ -33,7 +37,7 @@ class SurveyModal extends React.Component {
 
   render() {
     return (
-      <div>
+      <Container>
         <button onClick={this.toggleModal}>Discover your dream bike!</button>
         <StyledModal
           isOpen={this.state.modalOpen}
@@ -41,7 +45,7 @@ class SurveyModal extends React.Component {
           onEscapeKeydown={this.toggleModal}>
           <QuestionList surveyData={this.props.surveyData}/>
         </StyledModal>
-      </div>
+      </Container>
     )
   }
 }

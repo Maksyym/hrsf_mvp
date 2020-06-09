@@ -115,6 +115,21 @@ const surveyData = [
 
 ];
 
+const HeaderImg = styled.img`
+  width: 1280px;
+  height: 700px;
+  position: absolute;
+  z-index: -10;
+`;
+
+const Container = styled.div`
+  text-align: center;
+`;
+
+const HeaderText = styled.h1`
+  margin-top: 0px;
+`;
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -125,11 +140,12 @@ class App extends React.Component {
   render() {
     return(
       <div>
+        <HeaderImg src='https://www.bikethewest.com/wp-content/uploads/2019/01/hp_hero_01.jpg'/>
         <ModalProvider>
-          <div className="App">
-            <h2>Click this bad boy to get started:</h2>
+          <Container className="App">
+            <HeaderText>Click this bad boy to get started:</HeaderText>
             <SurveyModal surveyData={surveyData}/>
-          </div>
+          </Container>
         </ModalProvider>
       </div>
     )
