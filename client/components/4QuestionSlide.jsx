@@ -164,7 +164,11 @@ class FourQuestionSlide extends React.Component {
           onMouseLeave={this.handleMouseLeave1}
           onClick={this.handleClick1}
         >
-          1.1
+          <OptionPicture src='https://surlybikes.com/uploads/bikes/_medium_image/KarateMonkey_BK2042-2000x1333.jpg' />
+          <OptionText>
+            <OptionHeader>Testing</OptionHeader>
+            <OptionDescription>Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!</OptionDescription>
+          </OptionText>
         </FourQuestionSlideComponent>
         <FourQuestionSlideComponent
           color={this.state.optionTwoColor}
@@ -172,7 +176,11 @@ class FourQuestionSlide extends React.Component {
           onMouseLeave={this.handleMouseLeave2}
           onClick={this.handleClick2}
         >
-          1.2
+          <OptionPicture src='https://surlybikes.com/uploads/bikes/_medium_image/KarateMonkey_BK2042-2000x1333.jpg' />
+          <OptionText>
+            <OptionHeader>Testing</OptionHeader>
+            <OptionDescription>Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!</OptionDescription>
+          </OptionText>
         </FourQuestionSlideComponent>
         <FourQuestionSlideComponent
           color={this.state.optionThreeColor}
@@ -180,7 +188,11 @@ class FourQuestionSlide extends React.Component {
           onMouseLeave={this.handleMouseLeave3}
           onClick={this.handleClick3}
         >
-          1.3
+          <OptionPicture src='https://surlybikes.com/uploads/bikes/_medium_image/KarateMonkey_BK2042-2000x1333.jpg' />
+          <OptionText>
+            <OptionHeader>Testing</OptionHeader>
+            <OptionDescription>Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!</OptionDescription>
+          </OptionText>
         </FourQuestionSlideComponent>
         <FourQuestionSlideComponent
           color={this.state.optionFourColor}
@@ -188,7 +200,11 @@ class FourQuestionSlide extends React.Component {
           onMouseLeave={this.handleMouseLeave4}
           onClick={this.handleClick4}
         >
-          1.4
+          <OptionPicture src='https://surlybikes.com/uploads/bikes/_medium_image/KarateMonkey_BK2042-2000x1333.jpg' />
+          <OptionText>
+            <OptionHeader>Testing</OptionHeader>
+            <OptionDescription>Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!</OptionDescription>
+          </OptionText>
         </FourQuestionSlideComponent>
       </div>
     )

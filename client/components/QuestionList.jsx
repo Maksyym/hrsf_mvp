@@ -16,7 +16,7 @@ const Translator = styled.div`
 
   justify-content: center;
   transition: -ms-transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s, transform 0.5s ease 0s !important;
-  transform: translateY(${(props) => props.state}%)
+  transform: translateY(${(props) => props.state}px)
 `;
 
 const QuestionSet = styled.div`
@@ -37,7 +37,7 @@ class QuestionList extends React.Component {
   handleTranslate() {
 
     this.setState({
-      translateY: this.state.translateY - (1/3*100)
+      translateY: this.state.translateY - 600
     })
   }
 

@@ -9,13 +9,44 @@ const TwoQuestionSlideComponent = styled.div`
   height: 500px;
   width: 598px;
   margin: 50px 5px;
-  display: inline-flex;
+  display: inline-block;
   border-style: solid;
   border-width: 2px;
   border-color: ${props => props.color};
   border-radius: 5px;
+`;
+
+const OptionPicture = styled.img`
+  height: 360px;
+  width: 588px;
+  margin: 4px;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: top;
+`;
+
+const OptionText = styled.div`
+  height: 110px;
+  width: 588px;
+  margin-top: 5px;
+  display: block;
+  vertical-align: top;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+`;
+
+const OptionHeader = styled.h3`
+  vertical-align: top;
+  text-align: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+`;
+
+const OptionDescription = styled.p`
+  text-align: center;
+  vertical-align: center;
 `;
 
 class TwoQuestionSlide extends React.Component {
@@ -83,7 +114,11 @@ class TwoQuestionSlide extends React.Component {
           onMouseLeave={this.handleMouseLeave1}
           onClick={this.handleClick1}
         >
-          1.1
+          <OptionPicture src='https://surlybikes.com/uploads/bikes/_medium_image/KarateMonkey_BK2042-2000x1333.jpg' />
+          <OptionText>
+            <OptionHeader>Testing</OptionHeader>
+            <OptionDescription>Hello world!</OptionDescription>
+          </OptionText>
         </TwoQuestionSlideComponent>
         <TwoQuestionSlideComponent
           color={this.state.optionTwoColor}
@@ -91,7 +126,11 @@ class TwoQuestionSlide extends React.Component {
           onMouseLeave={this.handleMouseLeave2}
           onClick={this.handleClick2}
         >
-          1.2
+          <OptionPicture src='https://surlybikes.com/uploads/bikes/_medium_image/KarateMonkey_BK2042-2000x1333.jpg' />
+          <OptionText>
+            <OptionHeader>Testing</OptionHeader>
+            <OptionDescription>Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!</OptionDescription>
+          </OptionText>
         </TwoQuestionSlideComponent>
       </div>
     )
