@@ -34,12 +34,12 @@ class SurveyModal extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.toggleModal}>Click me</button>
+        <button onClick={this.toggleModal}>Discover your dream bike!</button>
         <StyledModal
           isOpen={this.state.modalOpen}
           onBackgroundClick={this.toggleModal}
           onEscapeKeydown={this.toggleModal}>
-          <QuestionList />
+          <QuestionList surveyData={this.props.surveyData}/>
         </StyledModal>
       </div>
     )

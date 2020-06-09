@@ -11,14 +11,14 @@ const TwoQuestionSlideComponent = styled.div`
   margin: 50px 5px;
   display: inline-block;
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
   border-color: ${props => props.color};
   border-radius: 5px;
 `;
 
 const OptionPicture = styled.img`
   height: 360px;
-  width: 588px;
+  width: 590px;
   margin: 4px;
   border-radius: 5px;
   display: inline-block;
@@ -64,6 +64,7 @@ class TwoQuestionSlide extends React.Component {
     this.handleMouseOver2 = this.handleMouseOver2.bind(this);
     this.handleMouseLeave2 = this.handleMouseLeave2.bind(this);
     this.handleClick1 = this.handleClick1.bind(this);
+    this.handleClick2 = this.handleClick2.bind(this);
   }
 
   handleMouseOver1(event) {
@@ -97,12 +98,12 @@ class TwoQuestionSlide extends React.Component {
 
   handleClick1() {
     event.preventDefault()
-    console.log(`1 has been clicked`)
+    this.props.translate();
   }
 
   handleClick2() {
     event.preventDefault()
-    console.log(`2 has been clicked`)
+    this.props.translate();
   }
 
   render() {
@@ -114,10 +115,10 @@ class TwoQuestionSlide extends React.Component {
           onMouseLeave={this.handleMouseLeave1}
           onClick={this.handleClick1}
         >
-          <OptionPicture src='https://surlybikes.com/uploads/bikes/_medium_image/KarateMonkey_BK2042-2000x1333.jpg' />
+          <OptionPicture src={this.props.data[0].pic} />
           <OptionText>
-            <OptionHeader>Testing</OptionHeader>
-            <OptionDescription>Hello world!</OptionDescription>
+            <OptionHeader>{this.props.data[0].header}</OptionHeader>
+            <OptionDescription>{this.props.data[0].description}</OptionDescription>
           </OptionText>
         </TwoQuestionSlideComponent>
         <TwoQuestionSlideComponent
@@ -126,10 +127,10 @@ class TwoQuestionSlide extends React.Component {
           onMouseLeave={this.handleMouseLeave2}
           onClick={this.handleClick2}
         >
-          <OptionPicture src='https://surlybikes.com/uploads/bikes/_medium_image/KarateMonkey_BK2042-2000x1333.jpg' />
+          <OptionPicture src={this.props.data[1].pic} />
           <OptionText>
-            <OptionHeader>Testing</OptionHeader>
-            <OptionDescription>Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!</OptionDescription>
+            <OptionHeader>{this.props.data[1].header}</OptionHeader>
+            <OptionDescription>{this.props.data[1].description}</OptionDescription>
           </OptionText>
         </TwoQuestionSlideComponent>
       </div>

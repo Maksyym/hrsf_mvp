@@ -29,13 +29,19 @@ class QuestionList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      translateY: 0
+      translateY: 0,
+      surveyData: this.props.surveyData,
+      road: 0,
+      race: 0,
+      allTerrain: 0,
+      brakes: '',
+      
+
     }
     this.handleTranslate = this.handleTranslate.bind(this);
   }
 
   handleTranslate() {
-
     this.setState({
       translateY: this.state.translateY - 600
     })
@@ -44,10 +50,13 @@ class QuestionList extends React.Component {
   render() {
     return(
       <Translator state={this.state.translateY}>
-        <QuestionSet onClick={this.handleTranslate}><TwoQuestionSlide /></QuestionSet>
-        <QuestionSet onClick={this.handleTranslate}><ThreeQuestionSlide /></QuestionSet>
-        <QuestionSet onClick={this.handleTranslate}><FourQuestionSlide /></QuestionSet>
-        <QuestionSet onClick={this.handleTranslate}>4</QuestionSet>
+        <QuestionSet><ThreeQuestionSlide data={this.state.surveyData[0]} translate={this.handleTranslate}/></QuestionSet>
+        <QuestionSet><TwoQuestionSlide data={this.state.surveyData[1]} translate={this.handleTranslate} /></QuestionSet>
+        <QuestionSet><ThreeQuestionSlide data={this.state.surveyData[2]} translate={this.handleTranslate}/></QuestionSet>
+        <QuestionSet><FourQuestionSlide data={this.state.surveyData[3]} translate={this.handleTranslate} /></QuestionSet>
+        <QuestionSet><TwoQuestionSlide data={this.state.surveyData[4]} translate={this.handleTranslate} /></QuestionSet>
+        <QuestionSet><TwoQuestionSlide data={this.state.surveyData[5]} translate={this.handleTranslate} /></QuestionSet>
+        <QuestionSet><FourQuestionSlide data={this.state.surveyData[6]} translate={this.handleTranslate} /></QuestionSet>
       </Translator>
     )
   }

@@ -95,7 +95,7 @@ class ThreeQuestionSlide extends React.Component {
 
   handleClick1() {
     event.preventDefault()
-    console.log(`1 has been clicked`)
+    this.props.translate();
   }
 
   handleMouseOver2() {
@@ -114,7 +114,7 @@ class ThreeQuestionSlide extends React.Component {
 
   handleClick2() {
     event.preventDefault()
-    console.log(`2 has been clicked`)
+    this.props.translate();
   }
 
   handleMouseOver3() {
@@ -133,7 +133,7 @@ class ThreeQuestionSlide extends React.Component {
 
   handleClick3() {
     event.preventDefault()
-    console.log(`3 has been clicked`)
+    this.props.translate()
   }
 
   render() {
@@ -146,10 +146,10 @@ class ThreeQuestionSlide extends React.Component {
           onMouseLeave={this.handleMouseLeave1}
           onClick={this.handleClick1}
         >
-          <OptionPicture src='https://surlybikes.com/uploads/bikes/_medium_image/KarateMonkey_BK2042-2000x1333.jpg'/>
+          <OptionPicture src={this.props.data[0].pic}/>
           <OptionText>
-            <OptionHeader>Testing</OptionHeader>
-            <OptionDescription>Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!</OptionDescription>
+            <OptionHeader>{this.props.data[0].header}</OptionHeader>
+            <OptionDescription>{this.props.data[0].description}</OptionDescription>
           </OptionText>
         </ThreeQuestionSlideComponent>
         <ThreeQuestionSlideComponent
@@ -158,10 +158,10 @@ class ThreeQuestionSlide extends React.Component {
           onMouseLeave={this.handleMouseLeave2}
           onClick={this.handleClick2}
         >
-          <OptionPicture src='https://surlybikes.com/uploads/bikes/_medium_image/KarateMonkey_BK2042-2000x1333.jpg' />
+          <OptionPicture src={this.props.data[1].pic} />
           <OptionText>
-            <OptionHeader>Testing</OptionHeader>
-            <OptionDescription>Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!</OptionDescription>
+            <OptionHeader>{this.props.data[1].header}</OptionHeader>
+            <OptionDescription>{this.props.data[1].description}</OptionDescription>
           </OptionText>
         </ThreeQuestionSlideComponent>
         <Justifier>
@@ -171,10 +171,10 @@ class ThreeQuestionSlide extends React.Component {
             onMouseLeave={this.handleMouseLeave3}
             onClick={this.handleClick3}
           >
-            <OptionPicture src='https://surlybikes.com/uploads/bikes/_medium_image/KarateMonkey_BK2042-2000x1333.jpg' />
+            <OptionPicture src={this.props.data[2].pic} />
             <OptionText>
-              <OptionHeader>Testing</OptionHeader>
-              <OptionDescription>Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!Hello world!</OptionDescription>
+              <OptionHeader>{this.props.data[2].header}</OptionHeader>
+              <OptionDescription>{this.props.data[2].description}</OptionDescription>
             </OptionText>
         </ThreeQuestionSlideComponent>
         </Justifier>
