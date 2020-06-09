@@ -1,24 +1,28 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
 import styled from "styled-components";
+import TwoQuestionSlide from "./2QuestionSlide.jsx"
+import ThreeQuestionSlide from "./3QuestionSlide.jsx"
+import FourQuestionSlide from "./4QuestionSlide.jsx"
+
+
+// testing border:
+// border - style: solid;
+// border - width: 1px;
+// border - color: black;
 
 const Translator = styled.div`
   width: 1225px;
   height: 1800px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
+
   justify-content: center;
   transition: -ms-transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s, transform 0.5s ease 0s !important;
   transform: translateY(${(props) => props.state}%)
 `;
 
-const Placeholder = styled.div`
-  width: 1223px;
-  height: 598px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: red;
+const QuestionSet = styled.div`
+  width: 1225px;
+  height: 600px;
+  display: flex;
 `;
 
 class QuestionList extends React.Component {
@@ -40,10 +44,10 @@ class QuestionList extends React.Component {
   render() {
     return(
       <Translator state={this.state.translateY}>
-        <Placeholder onClick={this.handleTranslate}>1</Placeholder>
-        <Placeholder onClick={this.handleTranslate}>2</Placeholder>
-        <Placeholder onClick={this.handleTranslate}>3</Placeholder>
-        <Placeholder onClick={this.handleTranslate}>4</Placeholder>
+        <QuestionSet onClick={this.handleTranslate}><TwoQuestionSlide /></QuestionSet>
+        <QuestionSet onClick={this.handleTranslate}><ThreeQuestionSlide /></QuestionSet>
+        <QuestionSet onClick={this.handleTranslate}><FourQuestionSlide /></QuestionSet>
+        <QuestionSet onClick={this.handleTranslate}>4</QuestionSet>
       </Translator>
     )
   }
